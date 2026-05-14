@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AntiGravity AI | Finance Voice Assistant</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <meta name="description" content="Production-quality multilingual speech-to-speech Finance AI Assistant.">
+</head>
+<body>
+    <div id="app">
+        <!-- Language Selector -->
+        <div class="lang-selector-container">
+            <select id="lang-selector" class="lang-selector">
+                <option value="en-IN">English (India)</option>
+                <option value="en-US">English (US)</option>
+                <option value="hi-IN">Hindi (हिन्दी)</option>
+                <option value="gu-IN">Gujarati (ગુજરાતી)</option>
+                <option value="bn-IN">Bengali (বাংলা)</option>
+                <option value="es-ES">Spanish (Español)</option>
+                <option value="fr-FR">French (Français)</option>
+                <option value="de-DE">German (Deutsch)</option>
+                <option value="it-IT">Italian (Italiano)</option>
+                <option value="pt-PT">Portuguese (Português)</option>
+                <option value="ru-RU">Russian (Русский)</option>
+                <option value="zh-CN">Chinese (中文)</option>
+                <option value="ja-JP">Japanese (日本語)</option>
+                <option value="ko-KR">Korean (한국어)</option>
+                <option value="ar-SA">Arabic (العربية)</option>
+                <option value="tr-TR">Turkish (Türkçe)</option>
+            </select>
+        </div>
+
+        <!-- Main Interactive Orb -->
+        <div class="orb-container">
+            <div id="orb" class="orb idle">
+                <div class="glow"></div>
+                <div class="particles"></div>
+            </div>
+            <!-- Waveform visualizer -->
+            <div id="visualizer" class="visualizer">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </div>
+
+        <!-- Transcript and Hints -->
+        <div class="feedback-container">
+            <div id="transcript-box" class="transcript-box">
+                <div class="transcript-header">
+                    <span class="label">TRANSCRIPT:</span>
+                    <span id="listening-as" class="listening-as">Detecting...</span>
+                </div>
+                <span id="transcript-text">Waiting for speech...</span>
+            </div>
+            
+            <div id="hints-container" class="hints-container">
+                <span class="hint-label">Try asking:</span>
+                <div id="hint-text" class="hint-text">"What is a Mutual Fund?"</div>
+            </div>
+        </div>
+
+        <!-- Hidden stop button (visible when active) -->
+        <button id="stop-btn" class="stop-btn" title="Stop Everything">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                <rect x="6" y="6" width="12" height="12" rx="2"></rect>
+            </svg>
+        </button>
+
+        <!-- Hidden overlay to capture first click for AudioContext if needed -->
+        <div id="start-overlay" class="overlay">
+            <div class="start-prompt">
+                <div class="title">AntiGravity AI</div>
+                <div class="subtitle">Click to Activate Finance Voice Assistant</div>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="script.js"></script>
+</body>
+</html>
